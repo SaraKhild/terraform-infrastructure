@@ -14,9 +14,9 @@ resource "alicloud_instance" "web-instance" {
   user_data = base64encode(templatefile("web-setup.tpl", {
     redis_host  = alicloud_instance.redis-instance.private_ip,
     db_host     = alicloud_instance.db-instance.private_ip,
-    db_user     = "user",
-    db_password = "password",
-    db_name     = "mydatabase"
+    db_user     = var.db_user,
+    db_password = var.db_password,
+    db_name     = var.db_name
   }))
 
 }

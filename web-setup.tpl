@@ -10,7 +10,7 @@ docker run -d \
     --name web_app \
     -e REDIS_HOST="${redis_host}" \
     -e DB_HOST="${db_host}" \
-    -e DB_USER="user" \
-    -e DB_PASSWORD="password" \
-    -e DB_NAME="mydatabase" \
+    -e DB_USER="${db_user}" \
+    -e DB_PASSWORD="${db_password}" \
+    -e DB_NAME="${db_name}" \
     sarakalhussain/devops:latest
