@@ -59,6 +59,6 @@ resource "alicloud_nlb_listener" "listener" {
   mss                    = "0"
 }
 
-output "nlb_domain_name" {
+output "load_balanser_name" {
   value = alicloud_nlb_load_balancer.load-balancer.dns_name
 }

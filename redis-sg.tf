@@ -2,7 +2,7 @@ resource "alicloud_security_group" "redis-sg" {
   description = "redis-sg"
   vpc_id      = alicloud_vpc.vpc.id
 }
-resource "alicloud_security_group_rule" "allow-redis_to_ssh" {
+resource "alicloud_security_group_rule" "allow-redis-to-ssh" {
   type                     = "ingress"
   ip_protocol              = "tcp"
   policy                   = "accept"

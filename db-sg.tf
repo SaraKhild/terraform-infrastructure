@@ -2,7 +2,7 @@ resource "alicloud_security_group" "db-sg" {
   description = "db-sg"
   vpc_id      = alicloud_vpc.vpc.id
 }
-resource "alicloud_security_group_rule" "allow-db_to_ssh" {
+resource "alicloud_security_group_rule" "allow-db-to-ssh" {
   type                     = "ingress"
   ip_protocol              = "tcp"
   policy                   = "accept"
@@ -13,7 +13,7 @@ resource "alicloud_security_group_rule" "allow-db_to_ssh" {
 }
 
 
-resource "alicloud_security_group_rule" "allow-web-to_db" {
+resource "alicloud_security_group_rule" "allow-web-to-db" {
   type                     = "ingress"
   ip_protocol              = "tcp"
   policy                   = "accept"

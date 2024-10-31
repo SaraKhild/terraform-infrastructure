@@ -2,7 +2,7 @@ resource "alicloud_security_group" "web-sg" {
   description = "web-sg"
   vpc_id      = alicloud_vpc.vpc.id
 }
-resource "alicloud_security_group_rule" "allow_web_to_ssh" {
+resource "alicloud_security_group_rule" "allow-web-to-ssh" {
   type                     = "ingress"
   ip_protocol              = "tcp"
   policy                   = "accept"

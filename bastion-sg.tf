@@ -3,7 +3,7 @@ resource "alicloud_security_group" "bastion-sg" {
   description = "bastion_sg"
   vpc_id      = alicloud_vpc.vpc.id
 }
-resource "alicloud_security_group_rule" "allow-bastion_to_ssh" {
+resource "alicloud_security_group_rule" "allow-bastion-to-ssh" {
   type              = "ingress"
   ip_protocol       = "tcp"
   policy            = "accept"
